@@ -2,8 +2,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float a, b;
     for (short i = 1;i <= 4;i++) {
         cout << "请输入天然气年使用量（立方米）：";

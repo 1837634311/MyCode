@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     char x;
     cout << "请输入一个小写英文字母：";
     cin >> x;     // 输入字符常量

@@ -5,7 +5,6 @@ using namespace std;
 void sort(int[], int);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int size, i, arr[20] = { 0 };
     cout << "请输入数组的实际长度："; cin >> size;
     cout << "请输入" << size << "个数组元素：" << endl;

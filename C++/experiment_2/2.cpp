@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float x, y;
     for (short i = 1;i <= 2;i++) {
         cout << "请输入 x 的值（实数）：";

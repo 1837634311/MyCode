@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     char c;
     for (short i = 1;i <= 3;i++) {
         cout << "请输入任意一个字符：";

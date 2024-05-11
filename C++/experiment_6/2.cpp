@@ -4,7 +4,6 @@ using namespace std;
 double cos(double);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     cout << "请输入一个角度值：";
     double x;
     cin >> x;

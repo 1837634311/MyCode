@@ -6,7 +6,6 @@ void printArr(short[], short);
 
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     short n, i, j, arr[50] = { 0 };
     cout << "请输入一维数组元素的个数n(n<=50)："; cin >> n;
 

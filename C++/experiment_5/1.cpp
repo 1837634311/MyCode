@@ -1,7 +1,6 @@
 #include<iostream>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int i, n;
     cout << "请输入 n：";
     cin >> n;

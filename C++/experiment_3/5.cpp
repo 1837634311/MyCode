@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     short y, m, d, counts = 0;
     cout << "请分别输入年月日：";
     cin >> y >> m >> d;

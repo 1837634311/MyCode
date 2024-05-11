@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float a, b, c;
     cout.precision(4);    // 设置输出的小数位数
     for (short i = 1;i <= 2;i++) {    // 循环结构，便于在一个终端窗口中完成任务（截图方便省空间）

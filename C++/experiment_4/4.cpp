@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2020110419郑兴宇" << endl;
-
     short i = 0;
     float value = 100.0, rate;
     cout << "请输入年增长率：";

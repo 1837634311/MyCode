@@ -3,7 +3,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     short n, i, j, index, arr[20] = { 0 };
     cout << "请输入数组个数元素的个数（n<=20)："; cin >> n;
     cout << "请输入" << n << "个待排序的数：" << endl;

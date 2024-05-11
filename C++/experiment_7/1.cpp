@@ -3,7 +3,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     short n, i, odd = 0, even = 0, arr[50] = { 0 };
     float odd_sum = 0, even_sum = 0;
     cout << "请输入一维数组元素的个数n(n<=50)："; cin >> n;

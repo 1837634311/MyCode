@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2020110419郑兴宇" << endl;
     short n, odd = 0, even = 0;
     cout << "请输入一系列正整数（输入0或负数表示阶数）：" << endl;
     cin >> n;

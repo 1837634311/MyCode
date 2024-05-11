@@ -4,7 +4,6 @@ using namespace std;
 void putgraph(short);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     short n;
     char mark;
     do {

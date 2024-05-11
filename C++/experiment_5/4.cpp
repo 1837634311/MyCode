@@ -4,7 +4,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int men, women, children, m, cnt = 0;
     cout << "请输入砖数:";
     cin >> m;

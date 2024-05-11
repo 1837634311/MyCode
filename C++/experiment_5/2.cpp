@@ -2,7 +2,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int i, j;
 
     for (i = 1; i <= 9; i++) {    // 外层循环控制行号，以及左侧数字

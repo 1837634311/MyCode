@@ -4,7 +4,6 @@
 using namespace std;
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     char n[10] = { 0 };    // 定义一个字符数组 n，用于存储输入的二进制数
     short i = 0, sum = 0, len;
     cout << "请输入一个二进制整数（不超过10位）：" << endl;

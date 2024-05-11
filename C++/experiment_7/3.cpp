@@ -3,7 +3,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, arr[10], i, num = 0;
     cout << "请输入一个正整数（不超过10位）："; cin >> n;
     // 获取正整数每位的数字

@@ -7,7 +7,6 @@
 using namespace std;
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     const int M = 10;
     int x[M][M] = { 0 };
     int m = 6;

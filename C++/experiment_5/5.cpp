@@ -6,7 +6,6 @@
 using namespace std;
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int m, n, i, j, sum = 0, sum_no_6 = 0;
     cout << "请输入范围正整数m和n:";
     cin >> m >> n;

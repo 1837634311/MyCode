@@ -8,7 +8,6 @@ int Inverse(short);
 bool isPrime(short);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n;
     cout << "请输入数据个数：";
     cin >> n;

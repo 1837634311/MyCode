@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2020110419郑兴宇" << endl;
-
     short m, n, count = 0;
     cout << "请输入整数范围 m 和 n：";
     cin >> m >> n;

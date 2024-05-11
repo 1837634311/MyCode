@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2020110419郑兴宇" << endl;
-
     int num_2, num_10 = 0, c = 1;
     cout << "请输入一个二进制整数：";
     cin >> num_2;

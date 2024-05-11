@@ -4,7 +4,6 @@ using namespace std;
 double count(double[], int);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, i, num = 0;
     double arr[40];
     cout << "请输入学生人数n(n<=40)："; cin >> n;

@@ -2,8 +2,6 @@
 #include <math.h>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float a;
     cout << "请输入存款本金（元）：";
     cin >> a;

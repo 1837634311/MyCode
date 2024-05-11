@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     short x, i = 1;
     for (;i <= 2;i++) {
         cout << "请输入一个整数：";

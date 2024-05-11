@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float a, b, c;
     cout << "请输入某人的体重（公斤）：";
     cin >> a;         // 获取体重

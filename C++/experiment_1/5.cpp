@@ -2,8 +2,6 @@
 #include <math.h>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float m1, m2, r, F, G = 6.67e-11;
     cout << "请输入地球的质量：";
     cin >> m1;

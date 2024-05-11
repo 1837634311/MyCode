@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, flag, arr[20] = { 0 };
     cout << "请输入数组元素的个数n(n<=20)："; cin >> n;
     cout << "请按照降序输入" << n << "个元素：" << endl;

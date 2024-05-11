@@ -8,7 +8,6 @@
 using namespace std;
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, worker[20][5];
     // 第一列为职工号，第二列为1月工资，第三列为2月工资，第四列为3月工资，第五列为季度和
 

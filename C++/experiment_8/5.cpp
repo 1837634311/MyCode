@@ -4,7 +4,6 @@ using namespace std;
 int insert(int[], int, int);
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, x, i, cnt = 0, arr[30] = { 0 };
     cout << "请输入原降序数列的数据个数（n<=20)："; cin >> n;
     cout << "请输入" << n << "个数（降序）：" << endl;

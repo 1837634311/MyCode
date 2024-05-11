@@ -11,9 +11,6 @@ long long factorial(int n) {    // 计算阶乘
 }
 
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
-
     short x, i = 0;
     double temp, numerator, denominator, value = 0.0, y;
     const double pi = 3.14159265;

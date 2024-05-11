@@ -2,8 +2,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566 杨英杰 地质4" << endl;
-
     float x, y, z, A = 7.3;
     cout << fixed << setprecision(2);    // 设置小数位数为 2
     for (short i = 1;i <= 3;i++) {

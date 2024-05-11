@@ -1,8 +1,6 @@
 #include <iostream>
 using namespace std;
 int main() {
-    cout << "2020110419郑兴宇" << endl;
-
     short i = 0, n;
     cout << "请输入西瓜总数：";
     cin >> n;

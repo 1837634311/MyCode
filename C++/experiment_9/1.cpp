@@ -9,7 +9,6 @@
 using namespace std;
 
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int n, a[10][10], max[3], min[3];
 
     // 初始化矩阵

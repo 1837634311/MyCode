@@ -2,7 +2,6 @@
 #include <iomanip>
 using namespace std;
 int main() {
-    cout << "2023114566-杨英杰-地质4" << endl;
     int row, i, j;
     char ch;
     cout << "请输入行数和字符：";
