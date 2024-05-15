@@ -24,7 +24,7 @@ int main() {
         temp = (i % 4 == 0 ? 1 : -1) * (numerator / denominator);    // 根据 i 的值确定符号
         value += temp;
         i += 2;    // 只使用偶数幂
-    } while (abs(temp) >= 10e-7);    // 当新添加项的精度小于 10e-7 时，满足截断误差
+    } while (fabs(temp) >= 10e-7);    // 当新添加项的精度小于 10e-7 时，满足截断误差
 
     cout << "cos(" << x << ") = " << value << endl;
     //都用<cmath>了，不如直接 cos(y)

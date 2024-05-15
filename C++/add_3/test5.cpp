@@ -39,6 +39,7 @@ int gys(int a, int b) {
         b = r;
     }
     return a;
+    //return b == 0 ? a : gys(b, a % b); // 递归法
 }
 /*********************End********************/
 

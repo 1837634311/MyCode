@@ -18,7 +18,7 @@ double cos(double x) {
     y = x * PI / 180;
     for (; term_cosx > 10e-7; n++) {
         sign = -sign; // 改变符号，实现正负项的交替相加
-        term_cosx = term_cosx * y * y / ((2 * n - 1) * 2 * n); // 计算新项
+        term_cosx = term_cosx * y * y / (((n << 1) - 1) * (n << 1)); // 计算新项
         cosx += sign * term_cosx; // 计算余弦值
     }
     return cosx;

@@ -219,21 +219,24 @@
 一：
 
 ```cpp
+    // 使用辗转相除法求最大公约数
     do {
-        m = a % b;
-        a = b;
-        b = m;
-    } while (b != 0);
-    return a;
+        m = a % b;  // 计算 a 除以 b 的余数
+        a = b;      // 更新 a 为 b
+        b = m;      // 更新 b 为余数
+    } while (b != 0);  // 循环直到余数为 0
+    return a;           // 返回最大公约数
+    //return b == 0 ? a : gys(b, a % b); // 递归法
 ```
 
 二：
 
 ```cpp
-    for (; number > 0; number /= 10)
-        if (number % 10 == digit)
-            count++;
-    return count;
+    for (; number > 0; number /= 10)    // 从个位开始逐位检查数字 number
+        if (number % 10 == digit)    // 如果当前位的数字符合情况，则计数器加一
+            count++; 
+    return count;    // 返回计数结果
+
 ```
 
 ## 一维数组一
@@ -241,16 +244,17 @@
 一：
 
 ```cpp
-    fib[0] = 1;
+    fib[0] = 1;    // 数列的前两项是 1
     fib[1] = 1;
-    cout << setw(5) << fib[0] << setw(5) << fib[1];
+    cout << setw(5) << fib[0] << setw(5) << fib[1];    // 先输出前两项，避免访问数组时越界
     for (i = 2; i < 10; i++) {
         fib[i] = fib[i - 1] + fib[i - 2];
-        if (i % 5 == 0)
+        if (i % 5 == 0)    // 当输出 5 个数后，换行。因为输出第十个数后不换行，所以在此判断。
             cout << endl;
         cout << setw(5) << fib[i];
     }
     cout << endl;
+
 ```
 
 二：
@@ -261,9 +265,11 @@
     t = aa[0];
     aa[0] = aa[3];
     aa[3] = t;
+    //swap(aa[0], aa[3])
     t = aa[1];
     aa[1] = aa[2];
     aa[2] = t;
+    //swa(aa[1], aa[2])
 ```
 
 ## 一维数组二
@@ -274,24 +280,26 @@
     for (i = 0; i < 10; i++)
         cin >> unsorted[i];
 
-    for (i = 0; i < 10; i++) {
-        min = unsorted[0];
-        pmin = 0;
-        for (j = 0; j < 10; j++)
+    for (i = 0; i < 10; i++) {    // 外层循环，遍历排序后的数组
+        min = unsorted[0];    // 将第一个元素设置为最小值
+        pmin = 0;    // 将最小值的位置初始化为 0
+        for (j = 0; j < 10; j++)    // 内层循环，查找最小值及其位置
+			// 如果当前元素小于或等于最小值，更新最小值和最小值的位置
             if (unsorted[j] <= min) {
                 min = unsorted[j];
                 pmin = j;
             }
-        sorted[i] = min;
+        sorted[i] = min;    // 将最小值放入sorted数组
         unsorted[pmin] = 9999;
     }
+
 ```
 
 二：
 
 ```cpp
     for (i = 0; i < 5; i++) {
-        if (a[i] == x) {
+        if (a[i] == x) {    // 如果找到了，就输出和更新 flag
             cout << x << "是第" << i + 1 << "个数！" << endl;
             flag = 1;
             break;
@@ -304,11 +312,11 @@
 一：
 
 ```cpp
-    for (i = 0; i < 6; i++) {
-        m = a[5];
-        for (j = 5; j > 0; j--)
+    for (i = 0; i < 6; i++) {    // 外层循环，控制移动次数为 6 次
+        m = a[5];    // 将数组 a 中最后一个元素保存到临时变量 m 中
+        for (j = 5; j > 0; j--)    // 内层循环，将数组a中的元素向右移动一位
             a[j] = a[j - 1];
-        a[0] = m;
+        a[0] = m;    // 将临时变量m中保存的值赋给数组a中的第一个元素，实现循环移动
         for (j = 0; j < 6; j++) {
             cout << setw(3) << a[j];
         }
@@ -322,16 +330,16 @@
     cMax = cMin = cScore[0];
     cMaxIndex = cMinIndex = cSum = 0;
     for (i = 0; i < N; i++) {
-        if (cScore[i] > cMax) {
+        if (cScore[i] > cMax) {    // 寻找最大值
             cMax = cScore[i];
             cMaxIndex = i;
         }
-        if (cScore[i] < cMin) {
+        if (cScore[i] < cMin) {    // 寻找最小值
             cMin = cScore[i];
             cMinIndex = i;
         }
     }
-    for (i = 0; i < N; i++)
+    for (i = 0; i < N; i++)    // 计算总成绩
         cSum += cScore[i];
 ```
 
@@ -340,11 +348,12 @@
 一：
 
 ```cpp
-    for (i = 0; i < 4; i++) {
-        for (j = 0; j < 5; j++) {
+    for (i = 0; i < 4; i++)    // 外层循环，遍历矩阵的行
+        for (j = 0; j < 5; j++)    // 内层循环，遍历矩阵的列
             cin >> a[i][j];
-        }
-    }
+	/* 这道题主要问题是，要明白 cout 语句的下方没有其他括号，所以 for 循环不能添加括号。
+	也就是说，要明白单个语句不用加括号，明白哪些属于单个语句。
+	外层 for 里面只有一条 for，内层 for 里面只有一条 if，if 里面只有一条 cout。*/
     for (i = 0; i < 4; i++)
         for (j = 0; j < 5; j++)
             if (a[i][j] < 0)
@@ -353,15 +362,16 @@
 二：
 
 ```cpp
-    for (i = 0; i < n; i++) {
+    // 杨辉三角的外侧为 0
+	for (i = 0; i < n; i++) {
         a[i][0] = 1;
         a[i][i] = 1;
     }
-
+	// 计算杨辉三角的内部
     for (i = 2; i < n; i++)
         for (j = 1; j < i; j++)
             a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
-
+	// 输出杨辉三角
     for (i = 0; i < n; i++) {
         for (j = 0; j <= i; j++)
             cout << setw(6) << a[i][j];
@@ -375,6 +385,7 @@
 
 ```cpp
     pinversion = &inversion;
+    // 将 n 取模，得到 n 的个位数，并将其加到 inversion 的末尾。
     for (; *pn > 0; *pn /= 10)
         *pinversion = *pinversion * 10 + *pn % 10;
 ```
