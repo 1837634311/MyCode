@@ -23,10 +23,10 @@ int main() {
 
 void sort(int a[], int n) {
     for (int i = 0; i < n - 1; i++) {
-        bool flag = true;
+        bool flag = true;  // 设置一个值，用来判断在一轮循环中是否排序。若没有，则说明数组有序，结束循环。
         for (int j = 0; j < n - i - 1; j++)
-            if (a[j] < a[j + 1]) {
-                swap(a[j], a[j + 1]);
+            if (a[j] < a[j + 1]) {  // 如果前面的数比后面小，则
+                swap(a[j], a[j + 1]);  // 交换元素
                 flag = false;
             }
         if (flag)
