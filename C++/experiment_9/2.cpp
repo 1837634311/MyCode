@@ -1,5 +1,6 @@
 /*
-已知有 const int M=10; int x[M][M], m；要求：将按照如下规律自动生成的数据存放在x数组中，并输出如下图所示三角。
+从键盘输入职工人数n、每个职工的编号、每个职工1到3月的工资表，求出每人　
+第一李度的工资（一行求和）、每个月的平均工资（一列求平均值，保留整数）。（输出字段宽度设置为8）
 */
 
 #include <iostream>
@@ -7,37 +8,34 @@
 using namespace std;
 
 int main() {
-    const int M = 10;
-    int x[M][M] = { 0 }, m;
-    cout << "请输入m值："; cin >> m;
+    int n, worker[20][5];
+    // 第一列为职工号，第二列为1月工资，第三列为2月工资，第四列为3月工资，第五列为季度和
 
-    // 按照从上到下的顺序，递增初始化矩阵。先填充列，再填充行。 
-    for (int j = 0, cnt = 0; j < m; j++)
-        for (int i = 0; i < m - j; i++)
-            x[i][j] = ++cnt;
-
-    // 输出原始矩阵
-    for (int i = 0; i < m; i++) {
-        // 控制输出的数字格式
-        for (int j = 0; j < m - i; j++)
-            cout << setw(4) << x[i][j];
-        cout << endl;
+    // 初始化数组
+    cout << "请输入职工人数: "; cin >> n;
+    cout << "请输入" << n << "个职工的编号及1到3月的工资" << endl;
+    for (int i = 0; i < n; i++) {
+        cin >> worker[i][0] >> worker[i][1] >> worker[i][2] >> worker[i][3];
+        worker[i][4] = worker[i][1] + worker[i][2] + worker[i][3];
     }
 
-    // 输出倒三角矩阵矩阵
-    cout << "倒三角输出" << endl;
-    for (int i = 0; i < m; i++) {
-        // 控制输出的空格数
-        for (int j = 0; j < i; j++)
-            cout << setw(4) << ' ';
-        // 控制输出的数字格式，第一个数据单独设置格式 
-        for (int j = 0; j < m - i; j++)
-            if (j == 0)
-                cout << setw(4) << x[i][j];
-            else
-                cout << setw(8) << x[i][j];
-        cout << endl;
+    // 计算平均值。先求和，再平均
+    int ave_1 = 0, ave_2 = 0, ave_3 = 0, ave_q = 0;
+    for (int i = 0; i < n; i++) {
+        ave_1 += worker[i][1];
+        ave_2 += worker[i][2];
+        ave_3 += worker[i][3];
+        ave_q += worker[i][4];
     }
+    ave_1 /= n, ave_2 /= n, ave_3 /= n, ave_q /= n;
 
+    // 输出结果
+    cout << "每月的平均工资及每个职工的季度工资和为：" << endl;
+    cout << "  职工号 1月工资 2月工资 3月工资  季度和" << endl;
+    for (int i = 0; i < n; i++) {
+        cout << setw(8) << worker[i][0] << setw(8) << worker[i][1] << setw(8) << worker[i][2] << setw(8) << worker[i][3] \
+            << setw(8) << worker[i][4] << endl;
+    }
+    cout << "  平均值" << setw(8) << ave_1 << setw(8) << ave_2 << setw(8) << ave_3 << setw(8) << ave_q << endl;
     return 0;
 }
