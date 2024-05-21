@@ -44,5 +44,4 @@ void move(int* p, int m, int n) {
             *(p + j) = *(p + j + 1);
         *(p + m - 1) = temp;
     }
-    return;
 }

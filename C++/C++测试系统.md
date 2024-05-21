@@ -278,21 +278,17 @@
 
 ```cpp
     for (i = 0; i < 10; i++)
-        cin >> unsorted[i];
+		cin >> unsorted[i];
 
-    for (i = 0; i < 10; i++) {    // 外层循环，遍历排序后的数组
-        min = unsorted[0];    // 将第一个元素设置为最小值
-        pmin = 0;    // 将最小值的位置初始化为 0
-        for (j = 0; j < 10; j++)    // 内层循环，查找最小值及其位置
-			// 如果当前元素小于或等于最小值，更新最小值和最小值的位置
-            if (unsorted[j] <= min) {
-                min = unsorted[j];
-                pmin = j;
-            }
-        sorted[i] = min;    // 将最小值放入sorted数组
-        unsorted[pmin] = 9999;
-    }
-
+	for (i = 0; i < 10; i++) {    // 外层循环，遍历排序前的数组
+		min = 0;    // 将最小值的位置初始化为 0
+		for (j = 1; j < 10; j++)    // 内层循环，查找最小值的位置
+            // 如果当前元素小于或等于最小值，更新最小值的位置
+			if (unsorted[min] > unsorted[j])
+				min = j;
+		sorted[i] = unsorted[min];    // 将最小值放入sorted数组
+		unsorted[min] = 9999;
+	}
 ```
 
 二：
