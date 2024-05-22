@@ -1,33 +1,36 @@
 /*
-输入一个包含年和月的日期（例如2022年1月），输出其上一个月的日期（例如2021年12月）。
-（1）主函数功能：输入日期，调用子函数得到上一个月的日期，并输出。
-（2）子函数功能：求输入日期的上一个月的日期。
-        子函数头要求定义为：void prevMonth(int *year, int *month)。
+从键盘输入包含m个整数的集合存入数组a中、包含n个整数的集合存入数组b中，求a和b的并集c。
+要求：用指针操作数组。
 */
 
 #include <iostream>
 using namespace std;
-
-void prevMonth(int*, int*);
-
 int main() {
-    int y, m;
-    // 通过指针访问年、月
-    int* year = &y, * month = &m;
-    cout << "请输入年和月（以空格分隔）："; cin >> *year >> *month;
-    prevMonth(year, month);
-    return 0;
-}
+    int a[100], b[50], m, n;
 
-void prevMonth(int* year, int* month) {
-    if (1 <= *month && *month <= 12) {  // 判断输入数据是否合理
-        if (*month == 1) {  // 如果为 1 月，跨年
-            *month = 12;
-            *year -= 1;
-        } else {
-            *month -= 1;
-        }
-        cout << "前一个月为：" << *year << "年" << *month << "月" << endl;
-    } else
-        cout << "输入错误！" << endl;
+    int* A = a, * B = b;  // 用指针去操作两个数组
+    cout << "请输入数组a的个数m："; cin >> m;
+    cout << "请输入数组a的" << m << "个数：" << endl;
+    for (int i = 0; i < m; i++)
+        cin >> A[i];
+
+    cout << "请输入数组b的个数n："; cin >> n;
+    cout << "请输入数组b的" << n << "个数：" << endl;
+    for (int i = 0; i < n; i++)
+        cin >> B[i];
+
+    for (int i = 0; i < n; i++) {
+        for (int j = 0; j < m; j++)
+            // 遍历数组，当有不重复的数据时，将加到b中的数据加到a的末尾
+            if (B[i] == A[j])
+                break;
+            else if (j == m - 1)
+                A[m++] = B[i];
+    }
+
+    cout << "并集为：" << endl;
+    for (int i = 0; i < m; i++)
+        cout << A[i] << " ";
+
+    return 0;
 }

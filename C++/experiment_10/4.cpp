@@ -1,47 +1,33 @@
 /*
-自动产生斐波那契数列前m项的值，存储在数组a中。将数组a中的数据循环左移n位，并输出移动后的结果。
-（1）主函数功能：从键盘输入数据个数m及左移的位数n，产生斐波那契数列前m项的值存储在数组a中，
-    调用子函数实现对数组a左移n位的操作，并输出移动后的结果。
-（2）子函数功能：对指针p所指向的包含m个元素的数组实现循环左移n位的操作，
-    子函数头要求定义为：void move(int *p, int m, int n) 。
+输入一个包含年和月的日期（例如2022年1月），输出其上一个月的日期（例如2021年12月）。
+（1）主函数功能：输入日期，调用子函数得到上一个月的日期，并输出。
+（2）子函数功能：求输入日期的上一个月的日期。
+        子函数头要求定义为：void prevMonth(int *year, int *month)。
 */
 
 #include <iostream>
 using namespace std;
 
-void move(int*, int, int);
+void prevMonth(int*, int*);
 
 int main() {
-    int m, n, fib[50] = { 1, 1 };
-    int* p = fib;
-    cout << "请输入数据个数m："; cin >> m;
-
-    // 生成斐波拉契数列
-    for (int i = 0; i < m - 2; i++)
-        fib[i + 2] = fib[i] + fib[i + 1];
-
-    cout << "移动前的数据为：" << endl;
-    for (int i = 0; i < m; i++)
-        cout << fib[i] << " ";
-    cout << endl;
-
-    cout << "请输入左移的位数n："; cin >> n;
-    move(p, m, n);
-
-    cout << "移动后的数据为：" << endl;
-    for (int i = 0; i < m; i++)
-        cout << fib[i] << " ";
-    cout << endl;
-
+    int y, m;
+    // 通过指针访问年、月
+    int* year = &y, * month = &m;
+    cout << "请输入年和月（以空格分隔）："; cin >> *year >> *month;
+    prevMonth(year, month);
     return 0;
 }
 
-// 左移数组
-void move(int* p, int m, int n) {
-    for (int i = 0; i < n % m; i++) {
-        int temp = *p;
-        for (int j = 0; j < m; j++)
-            *(p + j) = *(p + j + 1);
-        *(p + m - 1) = temp;
-    }
+void prevMonth(int* year, int* month) {
+    if (1 <= *month && *month <= 12) {  // 判断输入数据是否合理
+        if (*month == 1) {  // 如果为 1 月，跨年
+            *month = 12;
+            *year -= 1;
+        } else {
+            *month -= 1;
+        }
+        cout << "前一个月为：" << *year << "年" << *month << "月" << endl;
+    } else
+        cout << "输入错误！" << endl;
 }
