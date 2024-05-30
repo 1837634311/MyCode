@@ -278,17 +278,17 @@
 
 ```cpp
     for (i = 0; i < 10; i++)
-		cin >> unsorted[i];
+        cin >> unsorted[i];
 
-	for (i = 0; i < 10; i++) {    // 外层循环，遍历排序前的数组
-		min = 0;    // 将最小值的位置初始化为 0
-		for (j = 1; j < 10; j++)    // 内层循环，查找最小值的位置
+    for (i = 0; i < 10; i++) {    // 外层循环，遍历排序前的数组
+        min = 0;    // 将最小值的位置初始化为 0
+        for (j = 1; j < 10; j++)    // 内层循环，查找最小值的位置
             // 如果当前元素小于或等于最小值，更新最小值的位置
-			if (unsorted[min] > unsorted[j])
-				min = j;
-		sorted[i] = unsorted[min];    // 将最小值放入sorted数组
-		unsorted[min] = 9999;
-	}
+            if (unsorted[min] > unsorted[j])
+                min = j;
+        sorted[i] = unsorted[min];    // 将最小值放入sorted数组
+        unsorted[min] = 9999;
+    }
 ```
 
 二：
@@ -347,9 +347,9 @@
     for (i = 0; i < 4; i++)    // 外层循环，遍历矩阵的行
         for (j = 0; j < 5; j++)    // 内层循环，遍历矩阵的列
             cin >> a[i][j];
-	/* 这道题主要问题是，要明白 cout 语句的下方没有其他括号，所以 for 循环不能添加括号。
-	也就是说，要明白单个语句不用加括号，明白哪些属于单个语句。
-	外层 for 里面只有一条 for，内层 for 里面只有一条 if，if 里面只有一条 cout。*/
+    /* 这道题主要问题是，要明白 cout 语句的下方没有其他括号，所以 for 循环不能添加括号。
+    也就是说，要明白单个语句不用加括号，明白哪些属于单个语句。
+    外层 for 里面只有一条 for，内层 for 里面只有一条 if，if 里面只有一条 cout。*/
     for (i = 0; i < 4; i++)
         for (j = 0; j < 5; j++)
             if (a[i][j] < 0)
@@ -358,16 +358,16 @@
 二：
 
 ```cpp
-    // 杨辉三角的外侧为 0
-	for (i = 0; i < n; i++) {
+    // 杨辉三角的外侧为 1
+    for (i = 0; i < n; i++) {
         a[i][0] = 1;
         a[i][i] = 1;
     }
-	// 计算杨辉三角的内部
+    // 计算杨辉三角的内部
     for (i = 2; i < n; i++)
         for (j = 1; j < i; j++)
             a[i][j] = a[i - 1][j - 1] + a[i - 1][j];
-	// 输出杨辉三角
+    // 输出杨辉三角
     for (i = 0; i < n; i++) {
         for (j = 0; j <= i; j++)
             cout << setw(6) << a[i][j];
