@@ -4,7 +4,6 @@
 对信息中的非字母，不做处理，原样输出。
 要求：使用string变量存放字符串，
 */
-
 #include <iostream>
 #include <string>
 using namespace std;

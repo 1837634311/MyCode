@@ -1,3 +1,6 @@
+/*
+输出九九乘法表。
+*/
 #include <iostream>
 #include <iomanip>
 using namespace std;

@@ -2,7 +2,6 @@
 从键盘输入包含m个整数的集合存入数组a中、包含n个整数的集合存入数组b中，求a和b的并集c。
 要求：用指针操作数组。
 */
-
 #include <iostream>
 using namespace std;
 int main() {

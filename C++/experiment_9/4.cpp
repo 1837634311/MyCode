@@ -2,7 +2,6 @@
 输入数字n（n<10），输出n层正方形图案。正方形图案最外层的数字是层数，
 最内层的数字是1，从外向内数字递减。（输出数据字段宽度设为3）
 */
-
 #include <iostream>
 #include <iomanip>
 using namespace std;

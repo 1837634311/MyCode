@@ -1,3 +1,6 @@
+/*
+计算，根号下5倍sinx的绝对值+8
+*/
 #include <iostream>
 #include <cmath>
 using namespace std;

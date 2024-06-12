@@ -1,3 +1,4 @@
+// 计算 cos 函数 （附加题，不是实验报告内容）
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -29,6 +30,5 @@ int main() {
     cout << "cos(" << x << ") = " << value << endl;
     //都用<cmath>了，不如直接 cos(y)
     cout << "cos(" << x << ") = " << cos(y) << endl;
-
     return 0;
 }

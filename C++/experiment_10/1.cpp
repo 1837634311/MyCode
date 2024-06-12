@@ -2,7 +2,6 @@
 求圆周率π的近似值，当通项 1/(2n-1) 小于 10-6 时结束。
 要求：用指针操作变量，即用指针方式访问 PI 与新项对应的变量
 */
-
 #include <iostream>
 using namespace std;
 

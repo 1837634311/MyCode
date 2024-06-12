@@ -1,3 +1,7 @@
+/*
+从键盘输入一系列正整数(输入0或负数表示结束)，分别统计这些数中奇数、偶数的个数。
+要求使用while语句。
+*/
 #include <iostream>
 using namespace std;
 int main() {

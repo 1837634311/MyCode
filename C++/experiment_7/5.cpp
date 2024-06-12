@@ -1,5 +1,7 @@
+/*
+输入一组数据并存入某一维数组中，用选择排序法完成数组元素的降序排列并输出。
+*/
 // 选择排序
-
 #include <iostream>
 using namespace std;
 int main() {

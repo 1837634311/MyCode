@@ -5,7 +5,6 @@
 （2）子函数功能：对指针p所指向的包含m个元素的数组实现循环左移n位的操作，
     子函数头要求定义为：void move(int *p, int m, int n) 。
 */
-
 #include <iostream>
 using namespace std;
 

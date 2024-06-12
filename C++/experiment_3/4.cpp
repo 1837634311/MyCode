@@ -1,3 +1,8 @@
+/*
+从键盘输入月份，判断该月是什么季节？
+提示：3~5月为春季，6~8月为夏季，9~11月为秋季，12、1、2月为冬季。
+要求：判断季节前，先使用if-else语句判断输入月份的合法性，然后使用switch语句判断季节，且switch中的case分句尽量少。
+*/
 #include <iostream>
 using namespace std;
 int main() {
@@ -6,16 +11,16 @@ int main() {
     cin >> a;
     if (a < 0 || a > 12) {
         cout << "月份输入错误";
-        return 0;
-    } else if (a < 3 || a > 11) {
+        exit(0);
+    } else if (a < 3 || a > 11)
         b = 3;
-    } else if (a < 6) {
+    else if (a < 6)
         b = 0;
-    } else if (a < 9) {
+    else if (a < 9)
         b = 1;
-    } else {
+    else
         b = 2;
-    }
+
     cout << a << " 月处于";
     switch (b) {
     case 0:
@@ -30,6 +35,5 @@ int main() {
     case 3:
         cout << "冬季" << endl;
     }
-    system("pause");
     return 0;
 }

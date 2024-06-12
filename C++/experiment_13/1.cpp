@@ -3,7 +3,6 @@
 （1）本题的文件采用相对路径方式进行访问。
 （2）请将自己的学号姓名输出到文件myfile.txt的第一行。
 */
-
 #include <iostream>
 #include <fstream>
 #include <ctime>
@@ -11,16 +10,16 @@
 using namespace std;
 
 int main() {
-    srand(time((unsigned int)NULL));
+    srand((unsigned int)time(NULL));
     ofstream outFile;
     outFile.open("myfile.txt");
     if (!outFile.is_open()) {
         cout << "没有打开文件！" << endl;
         exit(0);
     }
-    for (int i = 0; i < 40; i++) {
+    for (int i = 0; i < 40; i++)
         outFile << (char)(rand() % 58 + 65) << " ";
-    }
+
     outFile.close();
     return 0;
 }

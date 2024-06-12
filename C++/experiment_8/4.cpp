@@ -1,3 +1,9 @@
+/*
+用冒泡排序算法实现一维数组的降序排序。
+（1）主函数功能：输入一维数组元素，调用子函数sort实现数组元素的排序，并输出排序后的数组元素（数据域宽为4）。
+（2）子函数功能：用冒泡排序算法实现对长度为n的一维数组a进行降序排序。子函数头要求为：void sort(int a[ ],int n)
+*/
+// 冒泡排序
 #include <iostream>
 #include <iomanip>
 using namespace std;

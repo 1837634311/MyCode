@@ -1,3 +1,8 @@
+/*
+输出由数字组成的倒金字塔图形。
+（1）主函数功能：可多次从键盘输入行数n、调用子函数输出n行由数字组成的倒金字塔图形。
+（2）子函数功能：输出n行由数字组成的倒金字塔图形，函数原型为：void putgraph(int n);
+*/
 #include <iostream>
 using namespace std;
 
@@ -19,12 +24,10 @@ int main() {
 
 void putgraph(short n) {
     for (short i = 1; i <= n; i++) {
-        for (short j = 1; j <= i - 1; j++) {
+        for (short j = 1; j <= i - 1; j++)
             cout << " ";
-        }
-        for (short j = 1; j <= 2 * (n - i) + 1; j++) {
+        for (short j = 1; j <= 2 * (n - i) + 1; j++)
             cout << i;
-        }
         cout << endl;
     }
 }

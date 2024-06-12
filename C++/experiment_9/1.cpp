@@ -3,7 +3,6 @@
 求出其主对角线上元素的最大值及位置、次对角线上元素的最小值及位置，
 并完成两者的数据互换，输出互换后的结果矩阵。（输出字段宽度设为4)
 */
-
 #include <iostream>
 #include <iomanip>
 using namespace std;
@@ -23,7 +22,7 @@ int main() {
     min[0] = a[n - 1][n - 1], min[1] = min[2] = n - 1;
 
     // 找出主对角线上的最大值和次对角线上的最小值
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < n; i++)
         for (int j = 0; j < n; j++) {
             if (i == j && a[i][j] > max[0]) {
                 max[0] = a[i][j];
@@ -36,7 +35,6 @@ int main() {
                 min[2] = j;
             }
         }
-    }
 
     // 输出最值信息
     cout << "主对角线元素的最大值为：" << max[0] << "，位于第" << max[1] + 1 << "行，第" << max[2] + 1 << "列" << endl \

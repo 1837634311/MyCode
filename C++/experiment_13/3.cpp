@@ -5,8 +5,6 @@
 （1）本题的文件采用绝对路径方式进行访问，两个文件保存于同一文件夹中。
 （2）请将自己的学号姓名输出到文件newsalary.txt的第一行。
 */
-
-
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -29,9 +27,8 @@ int main() {
     outFile << firstLine << "  应发工资" << endl;
     // 读取文件的数据，存储在二维数组中
     while (!inFile.eof()) {
-        for (int x = 0; x < 4; x++) {
+        for (int x = 0; x < 4; x++)
             inFile >> arr[n][x];
-        }
         // 计算第五个数据，即应发工资
         arr[n][4] = arr[n][1] + arr[n][2] - arr[n][3];
         n++;
@@ -45,20 +42,19 @@ int main() {
 
     // 将数据写入输出文件
     for (int y = 0; y < n + 1; y++) {  // 因为要输出总和，所以输出 n + 1 行
-        if (y == n) {
+        if (y == n)
             // 如果为最后一行，输出"合计"
             outFile << "合计";
-        } else {
+        else
             // 否则，输出姓名
             outFile << arr[y][0];
-        }
-        for (int x = 1; x < 5; x++) {
+
+        for (int x = 1; x < 5; x++)
             outFile << setw(10) << arr[y][x];
-        }
-        if (y != n) {
+
+        if (y != n)
             // 最后一行不换行
             outFile << endl;
-        }
     }
     return 0;
 }

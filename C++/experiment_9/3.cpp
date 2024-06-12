@@ -1,7 +1,6 @@
 /*
 已知有 const int M=1O; int x[M][M], m；要求：将按照如下规律自动生成的数据存放在x数组中，并输出如下图所示三角。
 */
-
 #include <iostream>
 #include <iomanip>
 using namespace std;

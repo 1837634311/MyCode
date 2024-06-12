@@ -1,3 +1,7 @@
+/*
+从键盘输入正整数m和n （m，n的大小关系不确定），找出m到n范围内（包含m和n两个边界值）除以3余2、除以5余1、除以7余4的所有正整数，以及满足这些条件的整数个数。
+要求使用for语句。
+*/
 #include <iostream>
 using namespace std;
 int main() {
@@ -9,13 +13,12 @@ int main() {
         m = n;
         n = temp;
     }
-    for (short x = m; x <= n; x++) {
+    for (short x = m; x <= n; x++)
         if (x % 3 == 2 && x % 5 == 1 && x % 7 == 4) {
             // 找出除以3余2、除以5余1、除以7余4的所有正整数
             cout << x << endl;
             count++;
         }
-    }
     cout << "共有 " << count << " 个满足条件的整数" << endl;
     return 0;
 }

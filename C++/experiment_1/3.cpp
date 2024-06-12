@@ -1,3 +1,6 @@
+/*
+假设三年期存款年利率rate为3.4%，输入存款本金，计算三年期存款到期后的本息和，并输出。要求本息和保留两位小数。
+*/
 #include <iostream>
 #include <math.h>
 using namespace std;

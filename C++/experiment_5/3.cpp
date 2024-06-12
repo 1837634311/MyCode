@@ -1,3 +1,6 @@
+/*
+从键盘输入行数和一个字符，输出由这个字符构成的图形。
+*/
 #include <iostream>
 #include <iomanip>
 using namespace std;

@@ -2,7 +2,6 @@
 从键盘输入职工人数n、每个职工的编号、每个职工1到3月的工资表，求出每人　
 第一李度的工资（一行求和）、每个月的平均工资（一列求平均值，保留整数）。（输出字段宽度设置为8）
 */
-
 #include <iostream>
 #include <iomanip>
 using namespace std;

@@ -1,3 +1,7 @@
+/*
+从键盘输入n分钟，将其换算成小时和分钟输出。
+例如：输入分钟数为560分钟，则换算结果为9小时20分钟。输入输出格式参见样张：
+*/
 #include <iostream>
 using namespace std;
 int main() {

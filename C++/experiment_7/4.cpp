@@ -1,5 +1,6 @@
-// 数组删除元素
-
+/*
+输入n个整数并存入某一维数组中，找出其中的最大值，并将其删除。如果有多个相同的最大值，则只删除最后一个。
+*/
 #include <iostream>
 using namespace std;
 int main() {

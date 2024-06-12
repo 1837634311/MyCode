@@ -4,7 +4,6 @@
 （2）子函数功能：求输入日期的上一个月的日期。
         子函数头要求定义为：void prevMonth(int *year, int *month)。
 */
-
 #include <iostream>
 using namespace std;
 
@@ -24,9 +23,8 @@ void prevMonth(int* year, int* month) {
         if (*month == 1) {  // 如果为 1 月，跨年
             *month = 12;
             *year -= 1;
-        } else {
+        } else
             *month -= 1;
-        }
         cout << "前一个月为：" << *year << "年" << *month << "月" << endl;
     } else
         cout << "输入错误！" << endl;

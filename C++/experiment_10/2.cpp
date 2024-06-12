@@ -2,7 +2,6 @@
 从键盘输入数据的个数n及这n个数（包含重复数据），要求删除其中的重复数据，并输出去重后的数据。
 要求：用指针操作数组。
 */
-
 #include <iostream>
 using namespace std;
 
