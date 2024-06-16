@@ -12,12 +12,14 @@ using namespace std;
 int main() {
     srand((unsigned int)time(NULL));
     ofstream outFile;
-    outFile.open("myfile.txt");
+    outFile.open("myfile.txt");  // 运行程序以后，在你的项目的文件夹下面找到这个文件（并删除注释）
     if (!outFile.is_open()) {
         cout << "没有打开文件！" << endl;
         exit(0);
     }
+    outFile << "学号-姓名" << endl;  // 自行修改（并删除注释）
     for (int i = 0; i < 40; i++)
+        // 生成一个0-57之间的随机数，然后将其转换为ASCII码，最后将其转换为字母
         outFile << (char)(rand() % 58 + 65) << " ";
 
     outFile.close();
