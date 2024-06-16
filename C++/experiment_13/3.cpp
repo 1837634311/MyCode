@@ -12,9 +12,10 @@
 using namespace std;
 int main() {
     string firstLine;
-    float arr[21][5];
+    float arr[21][5] = { 0 };
     // 定义整数变量n，用于记录数据行数
     int n = 0;
+    // 修改文件地址为你的文件。请注意，Windows的文件路径分隔符为反斜杠（\），且需要使用（\）转义符号。
     ifstream inFile("D:\\salary.txt");
     ofstream outFile("D:\\newsalary.txt");
     // 如果文件打开失败，输出错误信息并退出程序
@@ -22,11 +23,12 @@ int main() {
         cout << "文件打开失败！" << endl;
         exit(0);
     }
+    outFile << "学号-姓名" << endl;  // 自行修改（并删除注释）
     // 读取文件的第一行字符，补充并写入输出文件
     getline(inFile, firstLine);
     outFile << firstLine << "  应发工资" << endl;
     // 读取文件的数据，存储在二维数组中
-    while (!inFile.eof()) {
+    while (!inFile.eof()) {  // 判断文件是否结束
         for (int x = 0; x < 4; x++)
             inFile >> arr[n][x];
         // 计算第五个数据，即应发工资

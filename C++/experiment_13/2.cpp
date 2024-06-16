@@ -27,13 +27,15 @@ bool perfectNumber(int n) {
 */
 
 int main() {
+    // 修改文件地址为你的文件。请注意，Windows的文件路径分隔符为反斜杠（\），且需要使用（\）转义符号。
     ifstream inFile("D:\\source.txt");
     ofstream outFile("D:\\destination.txt");
     if (!inFile.is_open() || !outFile.is_open()) {
         cout << "文件打开错误！" << endl;
         return 0;
     }
-    while (!inFile.eof()) {
+    outFile << "学号-姓名" << endl;  // 自行修改（并删除注释）
+    while (!inFile.eof()) {  // 判断文件是否结束
         int n;
         inFile >> n;
         if (perfectNumber(n))

@@ -14,10 +14,12 @@ int main() {
     getline(cin, str);
 
     for (int i = 0; i < str.size(); i++) {
-        if (('A' + 5 <= str[i] && str[i] <= 'Z') || ('a' + 5 <= str[i] && str[i] <= 'z'))
-            str[i] -= 5;
-        else if (('A' <= str[i] && str[i] <= 'A' + 5) || ('a' <= str[i] && str[i] <= 'a' + 5))
-            str[i] += 26 - 5;
+        if ('A' <= str[i] && str[i] <= 'Z')
+            // 大写字母处理
+            str[i] = 'A' + (str[i] - 'A' - 5 + 26) % 26;
+        else if ('a' <= str[i] && str[i] <= 'z')
+            // 小写字母处理
+            str[i] = 'a' + (str[i] - 'a' - 5 + 26) % 26;
     }
     cout << "加密后的信息为：" << endl << str << endl;
     return 0;
