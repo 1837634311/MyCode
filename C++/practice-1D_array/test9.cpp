@@ -15,10 +15,13 @@ using namespace std;
     //子函数定义：实现选择排序 
 void SelectSort(int a[], int size) {
     for (int i = 0; i < size - 1; i++) {
+        // 定义最小值变量 min，初始值为 i
         int min = i;
         for (int j = i + 1; j < size; j++)
+            // 如果当前元素小于 min 指向的元素，则更新 min 的值为 j
             if (a[j] < a[min])
                 min = j;
+        // 交换 min 和 i 指向的元素
         swap(a[min], a[i]);
     }
 }

@@ -14,18 +14,22 @@ using namespace std;
 /******************Program********************/
     //子函数定义：实现插入
 int Insert(int arr[], int size, int target) {
+    // 从数组的最后一个元素开始遍历
     int i, j;
     for (i = size - 1; i > 0; i--)
+        // 如果当前元素大于目标元素，则将当前元素移动到下一个位置
         if (arr[i] > target)
             arr[i + 1] = arr[i];
+    // 否则，跳出循环
         else
             break;
+    // 将目标元素插入到当前元素的位置
     arr[i + 1] = target;
+    // 返回数组的新大小
     return size + 1;
 }
 /*******************End***********************/
-int main()
-{
+int main() {
     const int  N = 20;      //定义数组长度，预留插入空间
     int a[N], n, x, i, len;     //定义数组a及相关变量
     cout << "输入数列实际长度(n的大小不能超过10)：";

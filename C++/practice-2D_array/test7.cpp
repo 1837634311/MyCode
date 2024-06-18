@@ -31,11 +31,13 @@ int main() {
         for (j = 0;j <= m;j++)          //m是课程数量，再加上学号，故一行共m+1列，列下标[0,m]
             cin >> students[i][j];       //输入学号及各科成绩
     /*************Program**************/
-    for (i = 0;i < n;i++) {
+    for (i = 0; i < n; i++) {
         for (j = 1, sum = 0; j <= m; j++)
             sum += students[i][j];
-        if (sum / m > max)
-            max = sum / m, max_col = i;
+        if (sum / m > max) {
+            max = sum / m;
+            max_col = i;
+        }
     }
     /****************End***************/
     cout << "平均成绩最高为：" << fixed << setprecision(2) << max << endl;

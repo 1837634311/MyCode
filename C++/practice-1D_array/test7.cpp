@@ -28,13 +28,18 @@ int main() {
     cout << "请输入待查找的值：";
     cin >> val;
     /******************Program********************/
+    // 初始化bot和top指针
     bot = 0; top = n - 1;
     while (bot <= top) {
+        // 中间指针mid
         mid = bot + (top - bot) / 2;
+        // 如果val小于mid指针指向的数，则top指针向左移动
         if (val < a[mid])
             top = mid - 1;
+        // 如果mid指针指向的数小于val，则bot指针向右移动
         else if (a[mid] < val)
             bot = mid + 1;
+        // 如果mid指针指向的数等于val，则找到目标值，跳出循环
         else
             break;
     }

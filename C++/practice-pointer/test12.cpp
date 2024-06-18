@@ -28,10 +28,9 @@ int Delete(int* p, int n) {
     int i, j, pos = 1;
     /*****************Program******************/
     for (i = 1; i < n; i++) {
-        for (j = 0; j < pos; j++) {
+        for (j = 0; j < pos; j++)
             if (*(p + i) == *(p + j))
                 break;
-        }
         if (j == pos) {
             *(p + pos) = *(p + i);
             pos++;

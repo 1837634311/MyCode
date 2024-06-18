@@ -40,10 +40,14 @@ int main() {
 void cir_LeftMove(int a[], int n, int m) {
     int i, k, t;
     /******************Program********************/
+    // 外层循环，循环m % n次
     for (i = 0; i < m % n; i++) {
+        // 临时变量t，存储数组a的第一个元素
         t = a[0];
         for (k = 0; k < n - 1; k++)
+            // 交换数组a中相邻的两个元素
             swap(a[k], a[k + 1]);
+        // 数组a的最后一个元素设为t
         a[n - 1] = t;
     }
     /*******************End***********************/
@@ -51,10 +55,14 @@ void cir_LeftMove(int a[], int n, int m) {
 void cir_RightMove(int a[], int n, int m) {
     int i, k, t;
     /******************Program********************/
+    // 外层循环，循环m % n次
     for (i = 0; i < m % n; i++) {
+        // 临时变量t，存储数组a的最后一个元素
         t = a[n - 1];
         for (k = n - 1; k > 0; k--)
+            // 交换数组a中相邻的两个元素
             swap(a[k], a[k + 1]);
+        // 数组a的第一个元素设为t
         a[0] = t;
     }
     /*******************End***********************/

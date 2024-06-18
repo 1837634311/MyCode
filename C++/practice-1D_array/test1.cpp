@@ -21,15 +21,19 @@ int main() {
     for (i = 0;i < n;i++)
         cin >> score[i];    //输入数组元素的值
     /******************Program********************/
-    for (int i = 0; i < n; i++)
+    for (i = 0; i < n; i++)
         sum += score[i];
     average = sum / n;
     cout << "平均成绩：" << fixed << setprecision(2) << average << endl;
 
+    // 初始化j和k为0
     j = k = 0;
+    // 遍历数组score，i从0到n-1
     for (i = 0; i < n; i++) {
+        // 如果当前元素score[j]小于score[i]，则更新最大值下标j为i
         if (score[j] < score[i])
             j = i;
+        // 如果当前元素score[k]大于score[i]，则更新最小值下标k为i
         if (score[k] > score[i])
             k = i;
     }

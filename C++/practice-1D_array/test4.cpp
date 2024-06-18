@@ -16,17 +16,21 @@ using namespace std;
 int Del_Same(int a[], int n) {
     for (int i = 0; i < n; i++)
         for (int j = i + 1; j < n; j++)
+            // 如果a[i]等于a[j]
             if (a[i] == a[j]) {
+                // 从j开始，到n-1结束
                 for (int k = j; k < n - 1; k++)
+                    // a[k]等于a[k+1]
                     a[k] = a[k + 1];
+                // 数组长度减1
                 n--;
             }
+    // 返回数组长度n
     return n;
 }
 /*******************End***********************/
 
-int main()
-{
+int main() {
     const int  N = 10;
     int a[N], i, n, len;
     cout << "请输入数组实际长度：";

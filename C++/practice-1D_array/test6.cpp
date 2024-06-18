@@ -37,11 +37,13 @@ int Search(int num[], int n, int x) {
     int i, pos;
     /******************Program********************/
     for (i = 0; i < n; i++) {
+        // 如果找到元素x，记录位置pos并跳出循环
         if (num[i] == x) {
             pos = i;
             break;
         }
     }
+    // 如果遍历完数组仍未找到元素x，则pos为-1
     if (i == n)
         pos = -1;
     return pos;

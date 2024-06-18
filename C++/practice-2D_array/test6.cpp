@@ -22,8 +22,8 @@ using namespace std;
 int main() {
     const int N = 10;
     int a[N][N], n = 4, i, j;
-    // cout << "请输入S方阵的阶数：";
-    // cin >> n;
+    cout << "请输入S方阵的阶数：";
+    cin >> n;
     //实现产生S方阵的数据
     /*************Program**************/
     int cnt = 0;    // 不新定义一个变量没法做出来。

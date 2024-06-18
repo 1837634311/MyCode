@@ -58,8 +58,10 @@ void OutputArray(int* p, int n) {
 int Intersec(int* pa, int n1, int* pb, int n2, int* pc) {
     int i, j, n3 = 0;
     /*************Program************/
+    // 遍历pa数组，对于每个元素，在pb数组中查找是否有相同的元素
     for (i = 0; i < n1; i++)
         for (j = 0; j < n2; j++)
+            // 如果找到相同的元素，将pa数组的元素添加到pc数组中
             if (pa[i] == pb[j])
                 pc[n3++] = pa[i];
     /*************End************/
@@ -68,14 +70,13 @@ int Intersec(int* pa, int n1, int* pb, int n2, int* pc) {
 int Union(int* pa, int n1, int* pb, int n2, int* pc) {
     int i, j, n3 = 0;
     /*************Program************/
-    // 求 a 和 b 的并集
-    for (i = 0; i < n1; i++)
+    for (i = 0; i < n1; i++)  // 先将a的元素全部给c数组，再看a、b数组有没有相同的元素
         pc[n3++] = pa[i];
-    for (j = 0; j < n2; j++) {
-        for (i = 0; i < n1; i++)
-            if (pb[j] == pa[i])
+    for (j = 0; j < n2; j++) {    // 遍历b数组
+        for (i = 0; i < n1; i++)  // 遍历a数组
+            if (pb[j] == pa[i])    // 如果有重复元素，则中断循环
                 break;
-        if (i == n1)
+        if (i == n1)    // 如果遍历a数组到末尾都没有找到相同的元素，则将b的元素给c数组
             pc[n3++] = pb[j];
     }
     /*************End************/
@@ -84,10 +85,15 @@ int Union(int* pa, int n1, int* pb, int n2, int* pc) {
 int Difference(int* pa, int n1, int* pb, int n2, int* pc) {
     int i, j, n3 = 0;
     /*************Program************/
+    // 外层循环遍历数组pa中的每个元素
     for (i = 0; i < n1; i++) {
-        for (j = 0; j < n2; j++)
+        // 内层循环遍历数组pb中的每个元素
+        for (j = 0; j < n2; j++) {
+            // 如果pa[i]等于pb[j]，则跳出内层循环
             if (pa[i] == pb[j])
                 break;
+        }
+        // 如果内层循环结束后，j等于n2，说明没有找到相同元素，则将pa[i]添加到数组pc中
         if (j == n2)
             pc[n3++] = pa[i];
     }
