@@ -27,7 +27,7 @@ bool perfectNumber(int n) {
 */
 
 int main() {
-    // 修改文件地址为你的文件。请注意，Windows的文件路径分隔符为反斜杠（\），且需要使用（\）转义符号。
+    // 修改文件地址为你的文件。请注意，Windows的文件路径分隔符为反斜杠（\），且需要使用（\）转义符号（并删除注释）
     ifstream inFile("D:\\source.txt");
     ofstream outFile("D:\\destination.txt");
     if (!inFile.is_open() || !outFile.is_open()) {
