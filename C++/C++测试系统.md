@@ -262,14 +262,15 @@
 ```cpp
     for (i = 0; i < 4; i++, a /= 10)
         aa[i] = (a % 10 + 5) % 10;
+
     t = aa[0];
     aa[0] = aa[3];
     aa[3] = t;
-    //swap(aa[0], aa[3])
+    // swap(aa[0], aa[3]);
     t = aa[1];
     aa[1] = aa[2];
     aa[2] = t;
-    //swa(aa[1], aa[2])
+    // swap(aa[1], aa[2]);
 ```
 
 ## 一维数组二
