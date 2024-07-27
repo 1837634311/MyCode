@@ -25,8 +25,8 @@ int* reverseBookList(struct ListNode* head, int* returnSize) {
     }
     return returnArr;
 
-    /* 方法二：遍历链表，获取链表长度，再遍历链表，将值倒序存放数组 */
-    /*  // 建立一个头节点，用于初始遍历链表
+    /* 方法二：遍历链表，获取链表长度，再遍历链表，将值倒序存放数组
+        // 建立一个头节点，用于初始遍历链表
         *returnSize = 0;
         struct ListNode* p = head;
         while (p != NULL) {
